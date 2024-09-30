@@ -1,0 +1,11 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - eu-west-2          # Change this to your AWS region
+filters:                # Optional: Filters to select specific instances
+  instance-state-name: running
+# keyed_groups:
+#   - key: tags.Name      # Group by instance name (if tagged)
+#     prefix: instance
+# hostnames:
+#   - public-ip-address # Use private IP for internal access
+

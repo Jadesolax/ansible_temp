@@ -1,0 +1,14 @@
+---
+- name: Install NGINX on EC2 instances
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure NGINX is installed
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start NGINX
+      service:
+        name: nginx
+        state: started
